@@ -7,7 +7,7 @@ import {
 } from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-1.5-flash"; // free, fast, safe choice
-const API_KEY = "AIzaSyCQsNhEMhSPqRZN7FYKRTTkpeWLZQLPIlc"; // ✅ keep safe in .env
+const API_KEY = "Add your Api Key Here"; // ✅ keep safe in .env
 
 async function runChat(prompt) {
   try {
@@ -35,12 +35,7 @@ async function runChat(prompt) {
     });
 
     const result = await chat.sendMessage(prompt);
-    //  const result = await chat.sendMessage([
-    //   {
-    //     role: "user",
-    //     parts: [{ text: prompt }],
-    //   },
-    // ]);
+   
     const text = result.response.text();
 
     console.log("Gemini Response:", text);
